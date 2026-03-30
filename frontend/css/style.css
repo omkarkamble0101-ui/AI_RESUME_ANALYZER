@@ -1,0 +1,196 @@
+/* 🔥 COMMON BACKGROUND */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    position: relative;
+}
+
+.bg-auth {
+    background: url("../Image/back.png") no-repeat center;
+    background-size: cover;
+}
+
+/* 🔥 RESUME PAGE BACKGROUND */
+.bg-resume {
+    background: url("../Image/back.png") no-repeat center;
+    background-size: cover;
+}
+
+/* 🔥 OVERLAY */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+
+    z-index:0;
+}
+
+/* LOGIN + REGISTER */
+.bg-auth::before {
+    background: rgba(0,0,0,0.1);
+}
+
+/* RESUME PAGE */
+.bg-resume::before {
+    background: transparent !important;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 20vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 38px;
+    font-weight: bold;
+
+    background: linear-gradient(90deg, #00e6ff, #00ff9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 15px rgba(0, 230, 255, 0.7);
+
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: 320px;
+    padding: 25px;
+    border-radius: 15px;
+
+    /* 🔥 GLASS EFFECT */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* 🔥 BORDER + SHADOW */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    /* 🔥 GLASS INPUT */
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #eee;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: rgba(76, 175, 80, 0.8);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(76, 175, 80, 1);
+}
+
+/* 🔥 BOTTOM DESCRIPTION */
+.bottom-desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background: rgba(78, 154, 212, 0.9);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bottom-desc p {
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+}
+
+h2,p, a {
+    color: white;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.result-box {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4CAF50;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #00e6ff; }
+    50% { text-shadow: 0 0 20px #00e6ff; }
+    100% { text-shadow: 0 0 5px #00e6ff; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.result-box h3 {
+    color: #4CAF50;
+}
+
+.result-box p {
+    margin: 8px 0;
+}

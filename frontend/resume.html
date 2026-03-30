@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-resume">
+
+<div class="center-box">   
+    <div class="container">
+        <h2>Upload Resume</h2>
+
+        <input type="file" id="file"><br><br>
+        <button onclick="uploadResume()">Upload Resume</button>
+
+        <h3>Match Job</h3>
+
+        <textarea id="job" placeholder="Enter job desciption"></textarea><br>
+        <button onclick="matchJob()">Match</button>
+
+    <h3>Result</h3>
+    <div id="result" class="result-box"></div>
+    </div>
+</div> 
+
+<script src="js/resume.js"></script>
+</body>
+</html>
