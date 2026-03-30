@@ -7,3 +7,4 @@ passlib[bcrypt]
 python-jose
 email-validator
 pdfminer.six
+language-tool-python
